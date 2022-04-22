@@ -1,0 +1,45 @@
+.tabs-container {
+  margin-top: 80px;
+  &.courses {
+    margin-top: 0;
+  }
+  .buttons {
+    margin-bottom: 50px;
+    @media (min-width: 320px) and (max-width: 767px) {
+      gap: 30px;
+      justify-content: center !important;
+    }
+    &.prfile-btns {
+      @media (min-width: 320px) and (max-width: 991px) {
+        gap: 30px;
+        justify-content: center !important;
+      }
+    }
+    .tabs {
+      border: none;
+      box-shadow: $box-shadow;
+      color: $textcolor;
+      padding: 10px 20px;
+      width: 200px;
+      transition: 0.5s;
+      border-radius: 7px;
+      &.active,
+      &:hover {
+        background-color: $maincolor;
+        color: $white;
+      }
+    }
+  }
+}
+
+.pharma-tags-container {
+  padding: 15px 0;
+  gap: 20px;
+  margin-bottom: 15px;
+  .single-tag {
+    background: $bgcard;
+    color: $textcolor;
+    padding: 7px 20px;
+    box-shadow: $box-shadow;
+  }
+}

@@ -1,0 +1,47 @@
+.every-course {
+  padding: 10px;
+  .course-card-container {
+    background-color: $bgcard;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+
+    &:hover {
+      border-radius: 0;
+      .for-icons {
+        clip-path: circle(100%);
+      }
+      .course-cover-photo {
+        .photo {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .course-cover-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      height: $photo-height;
+      .photo {
+        object-fit: cover;
+        transition: 0.5s;
+      }
+    }
+    .course-content {
+      padding: 20px 0 0;
+      .offers {
+        .name {
+          color: $textcolor2;
+          margin: 0;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+      }
+      .course-description {
+        .description {
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+}

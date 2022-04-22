@@ -1,0 +1,301 @@
+.paragraph {
+  color: $textcolor;
+  font-size: 1rem;
+  line-height: 2;
+}
+.main-section-title {
+  color: $textcolor2;
+  margin-bottom: 30px;
+  text-shadow: $text-shadow;
+}
+.view-padding {
+  padding: $view-padding + 20 0;
+}
+.top-rated-slider {
+  padding: 50px 0;
+  .title {
+    color: $textcolor2;
+    margin-bottom: 40px;
+    span {
+      color: $maincolor;
+    }
+  }
+}
+.load-more-btn {
+  background-color: $maincolor;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  margin: 60px auto 0;
+  width: 240px;
+  text-align: center;
+  padding: 8px;
+  transition: $transition;
+  box-shadow: $box-shadow;
+  &:hover {
+    background-color: $secondcolor;
+  }
+}
+.input-focus {
+  border: 1px solid $bordercolor;
+  transition: 0.5s;
+  &:focus {
+    border-color: $secondcolor;
+    box-shadow: 0 1px 12px rgba($secondcolor, 0.3);
+  }
+}
+.section-heading {
+  color: $textcolor2;
+  margin-bottom: 40px;
+  text-shadow: $text-shadow;
+
+  span {
+    color: $maincolor;
+  }
+}
+.details-button {
+  background-color: $secondcolor;
+  color: $white;
+  box-shadow: $box-shadow;
+  transition: 0.5s;
+  width: 170px;
+  margin: auto;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  &.complete-portfolio {
+    background-color: $maincolor;
+    width: 220px;
+    margin-top: 10px;
+    &:hover {
+      background-color: $secondcolor;
+    }
+  }
+  &.follow-company {
+    margin-top: 30px;
+  }
+  &.apply-for-job {
+    background-color: $maincolor;
+    margin: 20px 0 0;
+    &:hover {
+      background-color: $secondcolor;
+    }
+  }
+  &.review-button {
+    background-color: $maincolor;
+    &:hover {
+      background-color: $secondcolor;
+    }
+  }
+  &.instucor {
+    margin: unset;
+    text-decoration: none;
+  }
+  .router-link {
+    text-decoration: none;
+    color: $white;
+  }
+  &.link {
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    background-color: $maincolor;
+    &:hover {
+      background-color: $secondcolor;
+    }
+  }
+  &:hover {
+    background-color: $maincolor;
+  }
+  &.confirm-btn-ok {
+    width: 130px;
+    background-color: $maincolor;
+  }
+  &.confirm-btn-cancel {
+    background-color: $cancel;
+  }
+}
+
+.prices {
+  gap: 20px;
+  .price {
+    color: $secondcolor;
+    &.old-price {
+      color: $textcolor;
+      text-decoration: line-through;
+    }
+    &.offer-price {
+      font-weight: bold;
+    }
+    .dollar {
+      margin: 0 5px;
+    }
+  }
+}
+
+.single-head {
+  color: $maincolor;
+}
+
+// image preview when choose a photo
+.preview-container-image {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: 0.5s;
+  transform: rotateY(0);
+  @media (min-width: 320px) and (max-width: 500px) {
+    padding: 10px;
+  }
+  &.swip-enter,
+  &.swip-leave-to {
+    transform: rotateY(90deg);
+  }
+  &.swip-enter-active,
+  &.swip-leave-active {
+    transition: transform 0.8s ease-in-out;
+  }
+}
+.preview-image {
+  width: 80%;
+  @media (min-width: 320px) and (max-width: 768px) {
+    width: 100%;
+  }
+  border-radius: 10px;
+  height: 300px;
+}
+
+// for input file when choose a photo == custom input file style
+.choose-photo-container {
+  padding: 20px 0;
+  .choose-label {
+    color: $textcolor;
+    margin-bottom: 15px;
+  }
+  .choose-photo {
+    .file-input {
+      display: none;
+    }
+    .upload-photo {
+      width: 40px;
+      height: 40px;
+      background-color: #eee;
+      color: $textcolor;
+      box-shadow: $box-shadow;
+      transition: 0.5s;
+      &:hover {
+        background-color: $secondcolor;
+        color: $white;
+      }
+      .icon {
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.validation-errors {
+  padding: 20px 0 0;
+}
+
+.clip-path {
+  clip-path: circle(100%);
+  &.fade-enter,
+  &.fade-leave-to {
+    clip-path: circle(0);
+  }
+  &.fade-enter-active,
+  &.fade-leave-active {
+    transition: clip-path 0.5s ease-in-out;
+  }
+}
+
+// for radio buttons
+.sizes-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  &.employee {
+    gap: 15px;
+  }
+  .user-type {
+    .form-input-radio {
+      appearance: none;
+      margin: 0;
+      background-color: $white;
+      cursor: pointer;
+      width: 0.9em;
+      height: 0.9em;
+      border: 2px solid $bordercolor;
+      border-radius: 50%;
+      transition: 0.5s;
+      &:hover,
+      &:checked {
+        background-color: $secondcolor;
+        box-shadow: 0 3px 9px rgba($black, 0.3);
+        border-color: $secondcolor;
+      }
+    }
+    .user-label {
+      margin: 0 7px;
+    }
+  }
+}
+
+.close-form-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1px 12px rgba($black, 0.3);
+  color: $textcolor;
+  border: 1px solid $bordercolor;
+  border-radius: 4px;
+  transition: 0.5s;
+  &:hover {
+    background-color: $cancel;
+    color: $white;
+    border-color: $cancel;
+  }
+}
+
+.confirm-container-buttons {
+  margin: 30px 0 20px;
+  gap: 10px;
+}
+
+// .confirm-enter,
+// .confirm-leave-to {
+//   clip-path: circle(0);
+// }
+// .confirm-enter-active,
+// .confirm-leave-active {
+//   transition: clip-path 0.5s ease-in-out;
+// }
+
+.errors-alerts,
+.success-alerts {
+  position: fixed;
+  min-width: 30%;
+  width: auto;
+  z-index: 9999999999999;
+  margin: auto;
+  top: 15%;
+  text-align: center;
+  right: 2%;
+  box-shadow: $box-shadow;
+
+  .close-alert {
+    &:focus {
+      box-shadow: unset;
+    }
+  }
+}

@@ -1,0 +1,231 @@
+@import "./colors";
+@import "./variables";
+@import "./tabsContainer";
+@import "./animations";
+@import "./icons";
+@import "./classes";
+@import "./formModal";
+@import "./cards";
+@import "./ratingAndReviews";
+
+%mainTitle {
+  color: $textcolor2;
+  margin-bottom: 40px;
+  position: relative;
+  &::after {
+    @extend %afterInHomePage;
+  }
+}
+// classes
+// %descriptionP {
+//   color: $textcolor;
+//   margin-bottom: 30px;
+// }
+
+%afterInHomePage {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 120%;
+  width: 80px;
+  height: 2px;
+  transform: translate(-50%, -120%);
+  background-color: $secondcolor;
+}
+
+%homeButton {
+  background-color: $maincolor;
+  color: $white;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+  .link {
+    color: $white;
+    padding: 5px 25px;
+    text-decoration: none;
+  }
+}
+
+%form-group {
+  width: 70%;
+  margin: 0 auto 30px;
+}
+
+%form-label {
+  margin-bottom: 15px;
+}
+
+%input-container {
+  border: 1px solid $bordercolor;
+}
+%form-input {
+  width: 95%;
+  border: none;
+  padding: 7px;
+  outline: none;
+  color: $textcolor;
+  &.date {
+    width: 100%;
+  }
+}
+%form-icon {
+  width: 4%;
+  color: $textcolor;
+  &.show-password {
+    cursor: pointer;
+  }
+}
+%form-submit-button {
+  background-color: $maincolor;
+  color: $white;
+  width: 170px;
+  margin: auto;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 12px rgba($black, 0.2);
+}
+
+%validation-errors {
+  padding: 20px 0 0;
+}
+// that in classes
+%load-more {
+  color: $textcolor2;
+  border: 1px solid $bordercolor;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  margin: 60px auto;
+  width: 240px;
+  text-align: center;
+  padding: 8px;
+  transition: 0.3s;
+  &:hover {
+    background-color: $maincolor;
+    color: $white;
+  }
+}
+
+%before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba($black, 0.4);
+}
+// classes
+%heading {
+  color: $textcolor2;
+  margin-bottom: 40px;
+  span {
+    color: $maincolor;
+  }
+}
+
+%close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1px 12px rgba($black, 0.3);
+  color: $textcolor;
+  border: 1px solid $bordercolor;
+  border-radius: 4px;
+  transition: 0.5s;
+  &:hover {
+    background-color: #f00;
+    color: $white;
+    border-color: #f00;
+  }
+}
+// Start Scroll Bar And Selection Backgrounds
+::selection {
+  background-color: $secondcolor;
+  color: $white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 11px;
+}
+::-webkit-scrollbar-button {
+  width: 5px;
+  height: 0px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top right, $maincolor, rgba($maincolor, 0.5));
+  border: 0px solid transparent;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background: $bgcard;
+  border: 0px none $white;
+  border-radius: 53px;
+}
+// End Scroll Bar And Selection Backgrounds
+.profile-education-from {
+  position: fixed;
+  z-index: 7777;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($black, 0.5);
+  clip-path: circle(100%);
+  &.fade-enter,
+  &.fade-leave-to {
+    clip-path: circle(0);
+  }
+  &.fade-enter-active,
+  &.fade-leave-active {
+    transition: clip-path 0.8s ease-in-out;
+  }
+  .educate-form {
+    width: 100%;
+    max-width: 700px;
+    padding: 50px 20px;
+    background-color: $white;
+    position: relative;
+    .form-group {
+      margin-bottom: 20px;
+      .form-label {
+        color: $textcolor;
+      }
+      .form-input {
+        border: 1px solid $bordercolor;
+        color: $textcolor;
+        width: 100%;
+        padding: 8px;
+        outline: none;
+        &.date {
+          cursor: pointer;
+        }
+      }
+    }
+    .edcation-btn {
+      @extend %form-submit-button;
+      margin: 40px auto 0;
+    }
+    .validation-error {
+      margin: 20px 0 0;
+    }
+  }
+}
+.vue-tags-input {
+  max-width: 100% !important;
+  .ti-input {
+    border: 1px solid $bordercolor !important;
+    padding: 7px !important;
+    color: $textcolor !important;
+  }
+}

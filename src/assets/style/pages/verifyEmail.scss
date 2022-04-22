@@ -1,0 +1,56 @@
+.verfiy {
+  .main-verfify-conent {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ver-title {
+    color: $maincolor;
+    text-shadow: $text-shadow;
+    margin-bottom: 30px;
+  }
+  .form {
+    width: 100%;
+    // background-color: #ccc;
+    .form-group {
+      width: 70%;
+      margin: 0 auto 20px;
+      @media (min-width: 320px) and(max-width:768px) {
+        width: 100%;
+      }
+      .form-label {
+        margin-bottom: 15px;
+      }
+      .input-container {
+        transition: $transition;
+        border: 1px solid $bordercolor !important;
+        border: none;
+        padding: 7px;
+        outline: none;
+        color: $textcolor;
+        &:focus-within {
+          border-color: $secondcolor !important;
+          box-shadow: 0 1px 12px rgba($secondcolor, 0.3);
+        }
+
+        .form-input {
+          width: 95%;
+          border: none;
+          outline: none;
+          color: $textcolor;
+          &.date {
+            width: 100%;
+          }
+        }
+        .icon {
+          width: 4%;
+          color: $textcolor;
+          &.show-password {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

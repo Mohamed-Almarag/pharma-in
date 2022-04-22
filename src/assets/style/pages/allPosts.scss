@@ -1,0 +1,440 @@
+.posts-container {
+  position: relative;
+  transition: $transition;
+  .create-post-conatiner {
+    background-color: $white;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    padding: 5px 0;
+    .add-post-btn {
+      color: $textcolor;
+      width: 85%;
+      padding: 8px;
+      border: none;
+      margin: auto;
+      @media (min-width: 320px) and (max-width: 767px) {
+        width: 70%;
+      }
+    }
+  }
+  .for-all-posts {
+    padding-top: 40px;
+    overflow-y: auto;
+    height: 80vh;
+    @media (min-width: 320px) and (max-width: 767px) {
+      padding-top: 20px;
+      overflow-y: unset;
+      height: auto;
+    }
+  }
+  .post {
+    padding: 20px;
+    border-radius: $radius;
+    margin-top: 30px;
+    @media (min-width: 320px) and (max-width: 767px) {
+      padding: 0;
+      margin-top: 50px;
+    }
+    .post-header {
+      .active-information {
+        gap: 10px;
+        .photo-container {
+          width: 50px;
+          height: 50px;
+          padding: 2px;
+          box-shadow: $box-shadow;
+          border: 1px solid $bordercolor;
+          transition: $transition;
+          &:hover {
+            transform: rotateZ(-10deg);
+            filter: brightness(1);
+          }
+          .img {
+            object-fit: cover;
+            transition: $transition;
+            filter: brightness(0.8);
+          }
+        }
+        .part-two {
+          .name {
+            color: $textcolor2;
+            font-size: 1rem;
+          }
+          .last-time {
+            color: $textcolor;
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .edit-box-container {
+        color: $textcolor;
+        .dropdown {
+          .btn {
+            border: none;
+            width: 30px;
+            height: 30px;
+            transition: $transition;
+            text-align: center;
+            color: $textcolor2;
+            padding: 0;
+            font-weight: bold;
+            letter-spacing: 3px;
+            display: grid;
+            &:hover {
+              background-color: $bgcard;
+            }
+            &:focus {
+              outline: none;
+              box-shadow: unset;
+            }
+            &::after {
+              display: none;
+            }
+          }
+        }
+        .dropdown-menu {
+          // margin-top: 5px !important;
+          padding: 10px 0 !important;
+          width: 100px;
+          box-shadow: $chat-shadow;
+          border: none;
+          .li-item {
+            .dropdown-item {
+              padding: 8px;
+              color: $textcolor;
+              transition: $transition;
+              &:hover {
+                background-color: $maincolor;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .description-content {
+      padding: 15px 0;
+      .post-more-p {
+        // display: flex;
+        p {
+          margin: 0 !important;
+          // background-color: aqua;
+        }
+        .paragraph {
+          margin: 0;
+          font-size: 0.85rem;
+          line-height: unset;
+          &.hide {
+            display: none;
+          }
+        }
+        .read-more-post {
+          // display: block;
+          cursor: pointer;
+          color: $textcolor2;
+          &.hide {
+            display: none;
+          }
+        }
+      }
+    }
+    .post-photo {
+      .img {
+        max-height: 400px;
+      }
+    }
+    .comments-liks {
+      padding: 15px 0;
+      .icons {
+        color: $textcolor;
+        cursor: pointer;
+        padding: 3px 15px;
+        border-radius: 4px;
+        transition: $transition;
+        &:hover {
+          background-color: $bgcard;
+        }
+        &.like {
+          color: $maincolor;
+        }
+        .icon {
+        }
+        .text-icon {
+          margin: 0 5px;
+          &.dislike {
+            display: none;
+            color: red;
+          }
+          @media (min-width: 320px) and (max-width: 767px) {
+            display: none;
+          }
+        }
+      }
+    }
+    .comments-liks-number {
+      padding: 15px 10px;
+      border-bottom: 1px solid $bordercolor;
+      font-size: 0.8rem;
+      .icons {
+        color: $textcolor;
+        .icon {
+        }
+        .text-icon {
+          margin: 0 5px;
+        }
+      }
+      .comment-container {
+        font-size: 0.8rem;
+        gap: 26px;
+      }
+    }
+    .comments-liks {
+      border-bottom: 1px solid $bordercolor;
+    }
+    .all-users-comments {
+      padding: 15px 0;
+      .show-all {
+        color: $textcolor;
+        margin-bottom: 10px;
+      }
+      .every-user-comment {
+        margin-bottom: 20px;
+        .main-user-comment {
+          .comment-container {
+            gap: 7px;
+            .user-photo-comment {
+              width: 30px;
+              height: 30px;
+            }
+            .comment-text-container {
+              .comment-words {
+                background-color: $bgcard;
+                padding: 10px;
+                border-radius: $radius;
+                width: fit-content;
+                .for-edit {
+                  display: flex;
+                  margin-bottom: 5px;
+                  align-items: center;
+                  .update-comment {
+                    margin: 0 10px;
+                  }
+                  .dropdown {
+                    .btn {
+                      border: none;
+                      width: 30px;
+                      height: 30px;
+                      transition: $transition;
+                      text-align: center;
+                      color: $textcolor2;
+                      padding: 0;
+                      font-weight: bold;
+                      letter-spacing: 3px;
+                      display: grid;
+                      &:hover {
+                        background-color: $bgcard;
+                      }
+                      &:focus {
+                        outline: none;
+                        box-shadow: unset;
+                      }
+                      &::after {
+                        display: none;
+                      }
+                    }
+                  }
+                  .dropdown-menu {
+                    // margin-top: 5px !important;
+                    padding: 10px 0 !important;
+                    width: 100px;
+                    box-shadow: $chat-shadow;
+                    border: none;
+                    .li-item {
+                      .dropdown-item {
+                        padding: 8px;
+                        color: $textcolor;
+                        transition: $transition;
+                        &:hover {
+                          background-color: $maincolor;
+                          color: $white;
+                        }
+                      }
+                    }
+                  }
+                }
+                .author-comment {
+                  color: $textcolor2;
+                }
+                .author-texts {
+                  color: $textcolor;
+                  font-size: 0.85rem;
+                  margin: 0;
+                }
+              }
+              .replay-btn {
+                color: $textcolor2;
+                margin: 10px 0;
+                width: fit-content;
+                cursor: pointer;
+              }
+              .replies {
+                .comment-words {
+                  background-color: $bgcard;
+                  padding: 10px;
+                  border-radius: $radius;
+                  margin-bottom: 10px;
+                  .for-edit {
+                    display: flex;
+                    margin-bottom: 5px;
+                    align-items: center;
+                    .update-comment {
+                      margin: 0 10px;
+                    }
+                    .dropdown {
+                      .btn {
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                        transition: $transition;
+                        text-align: center;
+                        color: $textcolor2;
+                        padding: 0;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        display: grid;
+                        &:hover {
+                          background-color: $bgcard;
+                        }
+                        &:focus {
+                          outline: none;
+                          box-shadow: unset;
+                        }
+                        &::after {
+                          display: none;
+                        }
+                      }
+                    }
+                    .dropdown-menu {
+                      // margin-top: 5px !important;
+                      padding: 10px 0 !important;
+                      width: 100px;
+                      box-shadow: $chat-shadow;
+                      border: none;
+                      .li-item {
+                        .dropdown-item {
+                          padding: 8px;
+                          color: $textcolor;
+                          transition: $transition;
+                          &:hover {
+                            background-color: $maincolor;
+                            color: $white;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .author-comment {
+                    color: $textcolor2;
+                    margin-bottom: 5px;
+                  }
+                  .author-texts {
+                    color: $textcolor;
+                    font-size: 0.85rem;
+                    margin: 0;
+                  }
+                }
+              }
+              .add-replay {
+                // background-color: $bgcard;
+                .comment-container {
+                  gap: 7px;
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  .replaies-container {
+                    display: flex;
+                    background-color: $bgcard;
+                    align-items: center;
+                    border-radius: $radius * 2;
+                    border-radius: 20px;
+                    padding: 0 10px;
+                    .small-icon {
+                      cursor: pointer;
+                      color: $textcolor;
+                      transition: $transition;
+                      display: none !important;
+                      @media (min-width: 320px) and (max-width: 767px) {
+                        display: block !important;
+                      }
+                      &:hover {
+                        color: $maincolor;
+                      }
+                    }
+                  }
+                  .user-photo-comment {
+                    width: 30px;
+                    height: 30px;
+                  }
+                  .comment-words {
+                    background-color: $bgcard;
+                    border-radius: $radius * 2;
+                    color: $textcolor;
+                    font-size: 0.85rem;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .add-comment {
+          margin-top: 15px;
+          .comment-container {
+            gap: 7px;
+            margin-bottom: 10px;
+            .replaies-container {
+              display: flex;
+              background-color: $bgcard;
+              align-items: center;
+              border-radius: $radius * 2;
+              border-radius: 20px;
+              padding: 0 10px;
+              .small-icon {
+                cursor: pointer;
+                color: $textcolor;
+                transition: $transition;
+                display: none !important;
+                @media (min-width: 320px) and (max-width: 767px) {
+                  display: block !important;
+                }
+                &:hover {
+                  color: $maincolor;
+                }
+              }
+            }
+            .user-photo-comment {
+              width: 30px;
+              height: 30px;
+            }
+            .comment-words {
+              &.comment-input {
+                padding: 10px;
+                background-color: $bgcard;
+                border-radius: $radius * 2;
+                color: $textcolor;
+                font-size: 0.85rem;
+                width: 100%;
+                border: none;
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

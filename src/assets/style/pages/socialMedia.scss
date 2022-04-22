@@ -1,0 +1,253 @@
+.social {
+  padding-bottom: 20px !important;
+  // overflow: hidden;
+  .aside {
+    // max-width: 300px;
+    padding-top: 20px;
+    background-color: $bgcard;
+    border-radius: $radius;
+    position: relative;
+    transition: $transition;
+    height: 80vh;
+    overflow: hidden;
+    @media (min-width: 320px) and (max-width: 767px) {
+      overflow: unset;
+    }
+    .aside-container {
+      .link {
+        padding: 8px 11px;
+        color: $textcolor;
+        margin-bottom: 20px;
+        color: $textcolor;
+        text-decoration: none;
+        transition: $transition;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $white;
+          color: $maincolor;
+        }
+        .icon {
+          color: $maincolor;
+          margin: 0 5px;
+        }
+      }
+      .active-freinds {
+        display: block;
+        border-radius: 0;
+
+        border-top: 1px solid $bordercolor;
+      }
+    }
+    .bars-icon-container {
+      display: none;
+    }
+    @media (min-width: 320px) and (max-width: 767px) {
+      position: fixed;
+      width: 320px;
+      height: 100%;
+      left: -320px;
+      z-index: 8888888;
+      border-radius: 0;
+      &.visible {
+        left: 0;
+        .bars-icon-container {
+          right: 5px;
+          top: 5px;
+          width: 30px;
+          height: 30px;
+          background-color: $white;
+          box-shadow: $chat-shadow;
+          transition: $transition;
+          &:hover {
+            background-color: $cancel;
+            .line {
+              background-color: $white !important;
+            }
+          }
+          .three-icon {
+            .line {
+              transition: $transition;
+              background-color: $textcolor;
+              &.line-1 {
+                transform: translateY(0) rotate(45deg) !important;
+              }
+              &.line-2 {
+                opacity: 0;
+              }
+              &.line-3 {
+                transform: translateY(0) rotate(-45deg) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bars-icon-container {
+      display: block;
+      position: absolute;
+      right: -40px;
+      top: 0;
+      background-color: $maincolor;
+      width: 40px;
+      height: 40px;
+      border: none;
+      transition: $transition;
+      &:hover {
+        background-color: $secondcolor;
+      }
+      .three-icon {
+        position: relative;
+        width: 100%;
+        .line {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $white;
+          transform-origin: center;
+
+          &.line-1 {
+            transform: translateY(-8px);
+          }
+          &.line-3 {
+            transform: translateY(8px);
+          }
+        }
+      }
+    }
+  }
+  .active-freinds {
+    // max-width: 300px;
+    padding-top: 20px;
+    background-color: $bgcard;
+    border-radius: $radius;
+    overflow-y: auto;
+    height: 80vh;
+    @media (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+    .all-friends {
+      // padding: 5px;
+      color: $textcolor;
+      margin-bottom: 10px;
+      .every-freind {
+        gap: 7px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        padding: 5px;
+        transition: 0.3s;
+        border-radius: $radius - 5px;
+        &:hover {
+          background-color: $white;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.main-chatting-container {
+  position: fixed;
+  bottom: 0;
+  left: 70px;
+  // height: calc(100vh - 35vh);
+  width: 300px;
+  background-color: $bgcolor;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  z-index: 999999 * 99999;
+  overflow: hidden;
+  box-shadow: $chat-shadow;
+  @media (min-width: 320px) and (max-width: 767px) {
+    left: 0;
+    width: 320px;
+  }
+  .chatting-container {
+    position: relative;
+    height: 100%;
+    .chat-header {
+      position: relative;
+      background-color: $white;
+      height: 50px;
+      z-index: 88;
+      padding: 8px;
+      box-shadow: $chat-shadow;
+
+      .friend-details {
+        gap: 5px;
+        .friend-img {
+          width: 30px;
+          height: 30px;
+        }
+        .freind-name {
+          color: $textcolor;
+          margin: 0 5px;
+        }
+      }
+      .close-chatting {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        color: $textcolor;
+        box-shadow: $chat-shadow;
+        transition: $transition;
+        &:hover {
+          background-color: $cancel;
+          color: $white;
+        }
+      }
+    }
+    .chat-body {
+      position: relative;
+      background-color: $white;
+      overflow-y: auto;
+      height: 300px;
+      padding: 8px;
+      .message {
+        background-color: $bgcard;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: $radius;
+        color: $textcolor;
+        width: fit-content;
+      }
+    }
+    .chat-footer {
+      position: relative;
+      background-color: $white;
+      z-index: 88;
+      box-shadow: $chat-shadow;
+      height: 50px;
+
+      .chat-text {
+        width: 100%;
+
+        .chat-textarea {
+          resize: none;
+          outline: none;
+          border: none;
+          color: $textcolor;
+          width: 100%;
+          display: block;
+          padding: 0 3px;
+          &.error {
+            color: $cancel;
+          }
+          &.notEmpty {
+            color: $textcolor;
+          }
+        }
+      }
+      .chat-actions {
+        width: 20%;
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.pharma-card {
+  padding: 10px;
+  .card-container {
+    background-color: $bgcard;
+    padding: 10px;
+    border-radius: 10px;
+    transition: $transition;
+
+    &:hover {
+      // border-radius: 0;
+      .for-icons {
+        clip-path: circle(100%);
+      }
+      .cover-photo {
+        .photo {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .cover-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      height: $photo-height;
+      .photo {
+        object-fit: cover;
+        transition: $transition;
+      }
+    }
+    .card-content {
+      padding: 20px 0 0;
+
+      .name {
+        color: $textcolor2;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .card-description {
+        .description {
+          margin: 10px 0 0 !important;
+          &.adrress {
+            color: $secondcolor;
+          }
+        }
+      }
+      .cardfooter {
+        &.guide {
+          .company,
+          .date,
+          .address {
+            color: $secondcolor;
+            margin-top: 10px;
+          }
+          .address {
+            color: $textcolor;
+          }
+        }
+      }
+    }
+  }
+}

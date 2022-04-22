@@ -1,0 +1,25 @@
+export default {
+  addPost: (state) => state.addPost,
+  allPosts: (state) => state.allPosts,
+  singlePost: (state) => state.singlePost,
+  users: (state) => state.users,
+  addFreind: (state) => state.addFreind,
+  myRequests: (state) => state.myRequests,
+  myFreindsRequests: (state) => state.myFreindsRequests,
+  myFreinds: (state) => state.myFreinds,
+  deleteMyRequest: (state) => state.deleteMyRequest,
+  acceptFreindsRequest: (state) => state.acceptFreindsRequest,
+  rejectFreindsRequest: (state) => state.rejectFreindsRequest,
+  blockMyFreind: (state) => state.blockMyFreind,
+  // for posts [add like , share, comment etc]
+  addPostLike: (state) => state.addPostLike,
+  allPostLikes: (state) => state.allPostLikes,
+  addComment: (state) => state.addComment,
+  allPostComments: (state) => state.allPostComments,
+  singleComment: (state) => state.singleComment,
+  addReplay: (state) => state.addReplay,
+  sharePost: (state) => state.sharePost,
+  getLikesNumber: (state) => state.getLikesNumber,
+  // chatt
+  chooseFreind: (state) => state.chooseFreind,
+};

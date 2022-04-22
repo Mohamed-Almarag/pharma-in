@@ -1,0 +1,134 @@
+// for all [ratings --reviews => comments]  in pharma
+
+// style for form rating
+.pharma-add-rate-form-container {
+  &.instructor-rating {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($black, 0.3);
+    padding: 50px;
+    @media (min-width: 320px) and (max-width: 768px) {
+      padding: 10px;
+    }
+    .pharma-add-rate-form {
+      position: relative;
+      padding: 40px 30px 30px;
+      height: 80vh;
+      overflow-y: auto;
+      background-color: $white;
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      @media (min-width: 320px) and (max-width: 768px) {
+        padding: 30px 10px;
+      }
+    }
+    .btts {
+      gap: 30px;
+      .cancel {
+        background-color: $cancel;
+      }
+    }
+  }
+  .pharma-add-rate-form {
+    padding: 10px 0;
+    width: 70%;
+    @media (min-width: 320px) and (max-width: 768px) {
+      width: 100%;
+    }
+    .stars-rating {
+      margin-bottom: 10px;
+      h6 {
+        margin: 20px 0 10px;
+        color: $textcolor;
+      }
+    }
+    .textarea {
+      height: 200px;
+      width: 100%;
+      resize: none;
+      outline: none;
+      padding: 8px;
+      color: $textcolor;
+    }
+  }
+}
+// style of all rating
+.pharma-main-rate-container {
+  padding: 30px 0;
+  .all-rates-container {
+    @media (min-width: 767px) and (max-width: 991px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4%;
+    }
+    .pharma-user-rate {
+      position: relative;
+      padding: 10px;
+      margin-top: 30px;
+      box-shadow: $box-shadow;
+      border-radius: 10px;
+      transition: $transition;
+
+      @media (min-width: 767px) and (max-width: 991px) {
+        width: 48%;
+      }
+      @media (min-width: 320px) and (max-width: 991px) {
+        display: block !important;
+        text-align: center;
+        margin-top: 50px;
+      }
+      &:hover {
+        background-color: $bgcard;
+        .img-rate {
+          object-fit: unset !important;
+          filter: brightness(1) !important;
+        }
+      }
+
+      .user-rate-content {
+        gap: 30px;
+        @media (min-width: 320px) and (max-width: 991px) {
+          display: block !important;
+        }
+        .rate-image-container {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          @media (min-width: 320px) and (max-width: 991px) {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translate(-50%);
+          }
+          .img-rate {
+            // object-fit: cover;
+            border-radius: 50%;
+            box-shadow: $box-shadow;
+            filter: brightness(0.7);
+            transition: all 0.5s;
+          }
+        }
+        .user-name-and-words {
+          @media (min-width: 320px) and (max-width: 991px) {
+            margin-top: 40px;
+            text-align: center;
+          }
+          h6 {
+            color: $maincolor;
+            margin-bottom: 10px;
+          }
+          .p-text {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

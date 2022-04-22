@@ -1,0 +1,126 @@
+.registration {
+  .description-title {
+    color: $textcolor2;
+    line-height: 2;
+  }
+  .form {
+    .form-group {
+      width: 70%;
+      margin: 0 auto 20px;
+      @media (min-width: 320px) and(max-width:768px) {
+        width: 100%;
+      }
+      .form-label {
+        margin-bottom: 15px;
+      }
+      .input-container {
+        transition: $transition;
+        border: 1px solid $bordercolor !important;
+        border: none;
+        padding: 7px;
+        outline: none;
+        color: $textcolor;
+        &:focus-within {
+          border-color: $secondcolor !important;
+          box-shadow: 0 1px 12px rgba($secondcolor, 0.3);
+        }
+
+        .form-input {
+          width: 95%;
+          border: none;
+          outline: none;
+          color: $textcolor;
+          &.date {
+            width: 100%;
+          }
+        }
+        .icon {
+          width: 4%;
+          color: $textcolor;
+          &.show-password {
+            cursor: pointer;
+          }
+        }
+      }
+      .container-user-type,
+      .size-options {
+        display: flex;
+        gap: 30px;
+        @media (min-width: 320px) and(max-width:420px) {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+      .user-type {
+        .form-input-radio {
+          appearance: none;
+          margin: 0;
+          background-color: $white;
+          cursor: pointer;
+          width: 0.9em;
+          height: 0.9em;
+          border: 2px solid $bordercolor;
+          border-radius: 50%;
+          transition: 0.5s;
+          &:hover,
+          &:checked {
+            background-color: $secondcolor;
+            box-shadow: 0 3px 9px rgba($black, 0.3);
+            border-color: $secondcolor;
+          }
+        }
+        .user-label {
+          margin: 0 7px;
+        }
+      }
+      .countries,
+      .citis {
+        .select-box {
+          margin: 0 10px;
+        }
+      }
+      &.Tagline {
+        margin: 0 auto 0;
+      }
+      &.verifid {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .check-box {
+          appearance: none;
+          margin: 0;
+          background-color: $white;
+          cursor: pointer;
+          width: 1.7em;
+          height: 1em;
+          border: 2px solid $bordercolor;
+          transition: 0.5s;
+          &:hover,
+          &:checked {
+            background-color: $secondcolor;
+            box-shadow: 0 3px 9px rgba($black, 0.3);
+            border-color: $secondcolor;
+          }
+        }
+      }
+    }
+    option:first-child {
+      display: none;
+    }
+
+    .submit-button {
+      @extend %form-submit-button;
+    }
+  }
+
+  .terms {
+    margin-top: 80px;
+    span {
+      color: $maincolor;
+    }
+  }
+
+  .validation-errors {
+    @extend %validation-errors;
+  }
+}
